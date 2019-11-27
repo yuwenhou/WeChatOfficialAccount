@@ -107,7 +107,10 @@ Table of Contents
                * [9.6 写5条常用sql语句](#96-写5条常用sql语句)
                * [9.7 简述mysql和redis区别](#97-简述mysql和redis区别)
                * [9.8 举例说明SQL注入和解决办法](#98-举例说明sql注入和解决办法)
-               * [<a href="http://www.itcast.cn" rel="nofollow">www.itcast.cn</a></h1>](#wwwitcastcn)
+               * [9.9 正则表达式匹配出](#99-正则表达式匹配出)
+   * [十、Linux知识](#十linux知识)
+               * [10.1 10个Linux常用命令](#101-10个linux常用命令)
+               * [10.2 Linux命令重定向 &gt; 和 &gt;&gt;](#102-linux命令重定向--和-)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
