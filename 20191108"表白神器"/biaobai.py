@@ -49,7 +49,6 @@ def show_like_interface(text, screen, color=(255, 0, 0)):
                 pygame.quit()
                 sys.exit()
 
-
 # 主函数
 def main():
     text = '算了吧'
