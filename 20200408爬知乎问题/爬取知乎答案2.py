@@ -64,14 +64,18 @@ def getBooksAndAnswers(qid):
             new_data['频率'] = movie_data[i]
             pandas_data.append(new_data)
     df2 = pd.DataFrame(pandas_data, columns=['书籍名称', '频率'])
-    df2.to_csv("python_book.csv",encoding="utf_8_sig")
+    df2.to_csv("python_book2.csv",encoding="utf_8_sig")
+
+
+getBooksAndAnswers(384304656)
+
+# question = [281789365,318258554,53183214,314024044,20668576,366471795]
+# for i in question:
+#     print(i)
+#     getBooksAndAnswers(i)
+#
 
 
 
-question = [281789365,318258554,53183214,314024044,20668576,366471795]
-# getBooksAndAnswers(281789365)
-for i in question:
-    print(i)
-    getBooksAndAnswers(i)
 
 

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Deckgl RGB PointCloud + Mapbox</title>
+<script src="https://unpkg.com/deck.gl@^7.0.0/dist.min.js"></script>
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js"></script>
+<link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css">
+<style>
+body {
+background-color: #000000;
+margin: 0;
+}
+#map {
+height: 100vh;
+width: 100%;
+margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+</body>
+<script type="text/javascript">
+const { MapboxLayer, PointCloudLayer } = deck;
+//REPLACE WITH YOUR MAPBOX ACCESS TOKEN
+mapboxgl.accessToken = 'your token here';
+const map = new mapboxgl.Map({
+container: 'map',
+//REPLACE THIS WITH THE MAPBOX STYLE URL OF YOUR CHOICE
+style: 'mapbox://styles/allanwalker/cjpn18pta036u2roe5ootbwwp?fresh=true',
+center: [-122.476622, 37.817516],
+zoom: 15.40,
+bearing: -34.40,
+pitch: 60
+});
+map.on('style.load', () => {
+map.addLayer(new MapboxLayer({
+id: 'deckgl-PointCloudLayer',
+type: PointCloudLayer,
+//REPLACE THIS WITH THE URL OF THE FILE
+data: 'array.json',
+getPosition: d => [d[0], d[1], d[2]],
+getColor: d => [d[3], d[4], d[5]],
+sizeUnits: 'meters',
+pointSize: 0.75,
+opacity: 1
+}));
+});
+</script>
+</html>
